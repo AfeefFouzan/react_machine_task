@@ -1,13 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import { Product, ProductDetails } from "./products";
 
-import Product from "./products"
-
-function App(){
-
-  return(
-    <div>
-      <Product />
-    </div>
-  )
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Product />} />
+      <Route path="/product/:id" element={<ProductDetails />} />
+    </Routes>
+  );
 }
 
 export default App;
